@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log switch.vds -m64 -mode batch -messageDb vivado.pb -notrace -source switch.tcl
+EAStep vivado -log jackpot.vds -m64 -mode batch -messageDb vivado.pb -notrace -source jackpot.tcl

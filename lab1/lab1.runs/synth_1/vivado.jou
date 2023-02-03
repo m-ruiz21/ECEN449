@@ -2,9 +2,9 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Thu Jan 26 13:47:14 2023
-# Process ID: 19037
-# Log file: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/synth_1/switch.vds
+# Start of session at: Thu Feb  2 18:08:32 2023
+# Process ID: 30537
+# Log file: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/synth_1/jackpot.vds
 # Journal file: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
-source switch.tcl -notrace
+source jackpot.tcl -notrace

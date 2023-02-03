@@ -6,4 +6,4 @@
 # Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log switch.vds -m64 -mode batch -messageDb vivado.pb -notrace -source switch.tcl
+vivado -log jackpot.vds -m64 -mode batch -messageDb vivado.pb -notrace -source jackpot.tcl

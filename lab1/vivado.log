@@ -1,0 +1,201 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu Feb  2 17:42:29 2023
+# Process ID: 9224
+# Log file: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/vivado.log
+# Journal file: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/coe/Xilinx/Vivado/2015.2/data/ip'.
+close [ open /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.srcs/constrs_1/new/jackpot.xdc w ]
+add_files -fileset constrs_1 /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.srcs/constrs_1/new/jackpot.xdc
+set_property top jackpot [current_fileset]
+update_compile_order -fileset sources_1
+set_property target_constrs_file /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.srcs/constrs_1/new/jackpot.xdc [current_fileset -constrset]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Feb  2 17:44:31 2023] Launched synth_1...
+Run output will be captured here: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/synth_1/runme.log
+[Thu Feb  2 17:44:31 2023] Launched impl_1...
+Run output will be captured here: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Feb  2 17:45:01 2023] Launched synth_1...
+Run output will be captured here: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/synth_1/runme.log
+[Thu Feb  2 17:45:01 2023] Launched impl_1...
+Run output will be captured here: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/runme.log
+open_hw
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2015.2
+  **** Build date : Jun 26 2015-16:42:45
+    ** Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server -url localhost:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210351A7805FA]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/210351A7805FA]
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210351A7805FA
+set_property PROGRAM.FILE {/home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/jackpot.bit} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/jackpot.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+refresh_hw_device [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Feb  2 17:49:31 2023] Launched synth_1...
+Run output will be captured here: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/synth_1/runme.log
+[Thu Feb  2 17:49:31 2023] Launched impl_1...
+Run output will be captured here: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.2
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/.Xil/Vivado-9224-zach-354a-01.engr.tamu.edu/dcp/jackpot.xdc]
+Finished Parsing XDC File [/home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/.Xil/Vivado-9224-zach-354a-01.engr.tamu.edu/dcp/jackpot.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 6196.152 ; gain = 0.996 ; free physical = 2314 ; free virtual = 19908
+Restored from archive | CPU: 0.020000 secs | Memory: 0.126137 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 6196.152 ; gain = 0.996 ; free physical = 2314 ; free virtual = 19908
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 6334.055 ; gain = 311.219 ; free physical = 2184 ; free virtual = 19777
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/jackpot.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Feb  2 17:52:28 2023] Launched synth_1...
+Run output will be captured here: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/synth_1/runme.log
+[Thu Feb  2 17:52:29 2023] Launched impl_1...
+Run output will be captured here: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Feb  2 17:53:45 2023] Launched synth_1...
+Run output will be captured here: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/synth_1/runme.log
+[Thu Feb  2 17:53:45 2023] Launched impl_1...
+Run output will be captured here: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/jackpot.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Feb  2 17:59:48 2023] Launched synth_1...
+Run output will be captured here: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/synth_1/runme.log
+[Thu Feb  2 17:59:48 2023] Launched impl_1...
+Run output will be captured here: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/jackpot.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property top counter [current_fileset]
+update_compile_order -fileset sources_1
+set_property target_constrs_file /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.srcs/constrs_1/new/counter.xdc [current_fileset -constrset]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Feb  2 18:02:48 2023] Launched synth_1...
+Run output will be captured here: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/synth_1/runme.log
+[Thu Feb  2 18:02:48 2023] Launched impl_1...
+Run output will be captured here: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/counter.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property top switch [current_fileset]
+update_compile_order -fileset sources_1
+set_property target_constrs_file /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/switch.xdc [current_fileset -constrset]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Feb  2 18:05:50 2023] Launched synth_1...
+Run output will be captured here: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/synth_1/runme.log
+[Thu Feb  2 18:05:50 2023] Launched impl_1...
+Run output will be captured here: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/switch.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property top jackpot [current_fileset]
+update_compile_order -fileset sources_1
+set_property target_constrs_file /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.srcs/constrs_1/new/jackpot.xdc [current_fileset -constrset]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Thu Feb  2 18:08:32 2023] Launched synth_1...
+Run output will be captured here: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/synth_1/runme.log
+[Thu Feb  2 18:08:32 2023] Launched impl_1...
+Run output will be captured here: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/jackpot.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Feb  2 18:14:30 2023...

@@ -1,24 +1,25 @@
 `timescale 1ns / 1ps
 
 module counter(
-    input BUTTONS[1:0],
+    input BUTTON0,
+    input BUTTON1,
     input clk, 
     input rst,
-    output reg [3:0] LEDS,
+    output reg [3:0] LEDS
     );
     
-    reg clk_out; 
-    clock_divider divider(
-        .clk_in(clk_in),
-        .clk_out(clk_out)
-    ); 
-
-    always @(posedge clk_out) begin
+    reg [26:0] counter = 26'b0;
+    always @(posedge clk) begin
         if (rst)
-            LEDS <= 4`b0;
-        else if (BUTTONS[0])
-            LEDS <= LEDS + 4`b1;
-        else if (BUTTONS[1])
-            LEDS <= LEDS - 4`b1;
+            LEDS <= 4'b0;
+        if (counter >= 125000000) begin
+            counter <= 0;
+            if (BUTTON0)
+                LEDS <= LEDS + 4'b1;
+            else if (BUTTON1)
+                LEDS <= LEDS - 4'b1;
+        end else begin
+            counter <= counter + 1;
+        end
     end
 endmodule

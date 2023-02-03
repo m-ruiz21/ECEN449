@@ -1,0 +1,106 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu Feb  2 17:42:29 2023
+# Process ID: 9224
+# Log file: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/vivado.log
+# Journal file: /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.xpr
+close [ open /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.srcs/constrs_1/new/jackpot.xdc w ]
+add_files -fileset constrs_1 /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.srcs/constrs_1/new/jackpot.xdc
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top jackpot [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+set_property target_constrs_file /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.srcs/constrs_1/new/jackpot.xdc [current_fileset -constrset]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+open_hw
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210351A7805FA]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/210351A7805FA]
+open_hw_target
+set_property PROGRAM.FILE {/home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/jackpot.bit} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/jackpot.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+open_run impl_1
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/jackpot.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/jackpot.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/jackpot.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top counter [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+set_property target_constrs_file /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.srcs/constrs_1/new/counter.xdc [current_fileset -constrset]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/counter.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top switch [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+set_property target_constrs_file /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/switch.xdc [current_fileset -constrset]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/switch.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top jackpot [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+set_property target_constrs_file /home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.srcs/constrs_1/new/jackpot.xdc [current_fileset -constrset]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {/home/ugrads/m/m.ruiz_21/opt/ECEN449/lab1/lab1.runs/impl_1/jackpot.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
